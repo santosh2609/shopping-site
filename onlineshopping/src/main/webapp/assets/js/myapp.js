@@ -1,7 +1,6 @@
 $(function() {
 	// solving the active menu problem
 	switch(menu) {
-	
 		case 'About Us':
 			$('#about').addClass('active');
 			break;
@@ -9,7 +8,7 @@ $(function() {
 			$('#contact').addClass('active');
 			break;
 		case 'All Products':
-			$('#listProducts').addClass('active');
+			$('#listproducts').addClass('active');
 			break;
 //		case 'Manage Products':
 //			$('#manageProducts').addClass('active');
@@ -17,11 +16,11 @@ $(function() {
 //		case 'User Cart':
 //			$('#userCart').addClass('active');
 //			break;
-		default:	
+		default:
 			if(menu == "Home") break;
-//			$('#listProducts').addClass('active');
-//			$('#a_'+menu).addClass('active');
-//			break;		
+			$('#listproducts').addClass('active');
+			$('#a_'+menu).addClass('active');
+			break;												
 	}
 
 	// to tackle the csrf token
