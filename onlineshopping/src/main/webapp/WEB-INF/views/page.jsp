@@ -28,6 +28,8 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.css" rel="stylesheet">
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<!-- Bootstrap DataTables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -51,7 +53,11 @@
 			</c:if>
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listproducts.jsp"%>
+			</c:if>						
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
 			</c:if>			
+			
 		</div>
 		<!-- footer -->
 		<%@include file="./shared/footer.jsp"%>
@@ -59,6 +65,11 @@
 		<!-- JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
 		<script src="${js}/myapp.js"></script>
 	</div>
 </body>
